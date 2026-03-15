@@ -11,7 +11,7 @@ namespace Distribuidora_Iumafis.Pages
 {
 
 
-    public partial class Productos
+    public partial class ListarProductos
     {
 
         /// <summary>

@@ -1,11 +1,20 @@
-﻿using System;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
-namespace Distribuidora_Iumafis.Pages
+namespace Distribuidora_Iumafis
 {
-    public partial class TestConexion : System.Web.UI.Page
+    public partial class _default : System.Web.UI.Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
         protected void btnProbar_Click(object sender, EventArgs e)
         {
             string cadena = ConfigurationManager.ConnectionStrings["MySqlConexion"].ConnectionString;
@@ -27,4 +36,3 @@ namespace Distribuidora_Iumafis.Pages
         }
     }
 }
-

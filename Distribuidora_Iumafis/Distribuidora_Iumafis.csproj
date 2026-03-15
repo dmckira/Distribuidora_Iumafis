@@ -119,6 +119,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="default.aspx" />
     <Content Include="Pages\Clientes\CrearCliente.aspx" />
     <Content Include="Pages\Clientes\EditarCliente.aspx" />
     <Content Include="Pages\Clientes\EliminarCliente.aspx" />
@@ -134,13 +135,19 @@
     <Content Include="Pages\Productos\EditarProducto.aspx" />
     <Content Include="Pages\Productos\EliminarProducto.aspx" />
     <Content Include="Pages\Productos\ListarProductos.aspx" />
-    <Content Include="Pages\Pruebas\TestConexion.aspx" />
     <Content Include="Pages\Usuarios\Login.aspx" />
     <Content Include="Pages\Usuarios\Logout.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Conexion.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Clientes\CrearCliente.aspx.cs">
       <DependentUpon>CrearCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,13 +252,6 @@
     </Compile>
     <Compile Include="Pages\Productos\ListarProductos.aspx.designer.cs">
       <DependentUpon>ListarProductos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Pruebas\TestConexion.aspx.cs">
-      <DependentUpon>TestConexion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Pruebas\TestConexion.aspx.designer.cs">
-      <DependentUpon>TestConexion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Usuarios\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

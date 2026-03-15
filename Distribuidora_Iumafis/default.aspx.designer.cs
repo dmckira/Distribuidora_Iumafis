@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Distribuidora_Iumafis.Pages
+namespace Distribuidora_Iumafis
 {
 
 
-    public partial class TestConexion
+    public partial class _default
     {
 
         /// <summary>
