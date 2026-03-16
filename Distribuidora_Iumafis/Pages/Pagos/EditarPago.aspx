@@ -66,7 +66,7 @@
                     <label class="form-label">Monto <span class="required">*</span></label>
                     <asp:TextBox ID="txtMonto" runat="server" CssClass="form-control" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="txtMonto" ErrorMessage="Obligatorio." ForeColor="Red" Display="Dynamic" Font-Size="12px" />
-                    <asp:RangeValidator runat="server" ControlToValidate="txtMonto" MinimumValue="0.01" MaximumValue="9999999" Type="Double" ErrorMessage="Invalido." ForeColor="Red" Display="Dynamic" Font-Size="12px" />
+                    <asp:RangeValidator runat="server" ControlToValidate="txtMonto" MinimumValue="0" MaximumValue="9999999" Type="Double" ErrorMessage="Invalido." ForeColor="Red" Display="Dynamic" Font-Size="12px" />
                 </div>
             </div>
             <div class="form-col">

@@ -8,6 +8,7 @@ namespace Negocio.Servicios
     public class PedidoNegocio
     {
         private readonly PedidoDAO dao = new PedidoDAO();
+        private readonly ProductoDAO productoDao = new ProductoDAO();
 
         public List<Pedido> ObtenerTodos()
         {
@@ -62,6 +63,13 @@ namespace Negocio.Servicios
                     throw new ArgumentException("La cantidad debe ser mayor que cero.");
                 if (d.PrecioUnitario <= 0)
                     throw new ArgumentException("El precio unitario debe ser mayor que cero.");
+                var producto = productoDao.ObtenerPorId(d.ProductoId);
+                if (producto == null)
+                    throw new ArgumentException("Producto no encontrado (ID: " + d.ProductoId + ").");
+                if (d.Cantidad > producto.Stock)
+                    throw new ArgumentException(
+                        "Stock insuficiente para \"" + producto.Nombre + "\". " +
+                        "Stock disponible: " + producto.Stock + ", solicitado: " + d.Cantidad + ".");
             }
         }
     }
