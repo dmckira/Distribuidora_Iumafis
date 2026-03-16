@@ -13,14 +13,19 @@ namespace Distribuidora_Iumafis.Pages.Productos
 
     public partial class CrearProducto
     {
-
-        /// <summary>
-        /// control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Panel pnlAlerta;
+        protected global::System.Web.UI.WebControls.Label lblAlerta;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtCategoria;
+        protected global::System.Web.UI.WebControls.TextBox txtMarca;
+        protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
+        protected global::System.Web.UI.WebControls.TextBox txtIngredientes;
+        protected global::System.Web.UI.WebControls.TextBox txtBeneficios;
+        protected global::System.Web.UI.WebControls.TextBox txtRecomendaciones;
+        protected global::System.Web.UI.WebControls.TextBox txtPrecio;
+        protected global::System.Web.UI.WebControls.TextBox txtStock;
+        protected global::System.Web.UI.WebControls.CheckBox chkDisponibilidad;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDisponibilidad;
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
     }
 }

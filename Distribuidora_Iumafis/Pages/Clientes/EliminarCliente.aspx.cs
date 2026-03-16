@@ -11,7 +11,12 @@ namespace Distribuidora_Iumafis.Pages.Clientes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (int.TryParse(Request.QueryString["id"], out int id) && id > 0)
+            {
+                try { new Negocio.Servicios.ClienteNegocio().Eliminar(id); Response.Redirect("ListarClientes.aspx?msg=eliminado"); }
+                catch { Response.Redirect("ListarClientes.aspx?msg=error"); }
+            }
+            else Response.Redirect("ListarClientes.aspx");
         }
     }
 }

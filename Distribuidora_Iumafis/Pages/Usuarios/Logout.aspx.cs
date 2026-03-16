@@ -11,7 +11,9 @@ namespace Distribuidora_Iumafis.Pages.Usuarios
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("~/Pages/Usuarios/Login.aspx");
         }
     }
 }

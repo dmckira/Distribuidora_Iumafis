@@ -1,11 +1,7 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Negocio.Servicios;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Distribuidora_Iumafis
 {
@@ -13,25 +9,50 @@ namespace Distribuidora_Iumafis
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+                CargarDashboard();
         }
-        protected void btnProbar_Click(object sender, EventArgs e)
-        {
-            string cadena = ConfigurationManager.ConnectionStrings["MySqlConexion"].ConnectionString;
 
+        private void CargarDashboard()
+        {
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(cadena))
+                var svc = new ReporteNegocio();
+                var resumen = svc.ObtenerResumenDashboard();
+
+                lblTotalProductos.Text = resumen["TotalProductos"].ToString();
+                lblTotalClientes.Text = resumen["TotalClientes"].ToString();
+                lblPedidosPendientes.Text = resumen["PedidosPendientes"].ToString();
+                lblIngresosMes.Text = string.Format("{0:N2}", resumen["IngresosMes"]);
+
+                var topProductos = resumen["TopProductos"] as List<string>;
+                if (topProductos != null && topProductos.Count > 0)
                 {
-                    conn.Open();
-                    lblResultado.Text = "Conexión exitosa a MySQL";
-                    lblResultado.ForeColor = System.Drawing.Color.Green;
+                    rptTopProductos.DataSource = topProductos;
+                    rptTopProductos.DataBind();
+                }
+                else
+                {
+                    lblNoTopProductos.Text = "Sin datos disponibles.";
+                }
+
+                var topClientes = resumen["TopClientes"] as List<string>;
+                if (topClientes != null && topClientes.Count > 0)
+                {
+                    rptTopClientes.DataSource = topClientes;
+                    rptTopClientes.DataBind();
+                }
+                else
+                {
+                    lblNoTopClientes.Text = "Sin datos disponibles.";
                 }
             }
             catch (Exception ex)
             {
-                lblResultado.Text = "Error al conectar: " + ex.Message;
-                lblResultado.ForeColor = System.Drawing.Color.Red;
+                lblTotalProductos.Text = "0";
+                lblTotalClientes.Text = "0";
+                lblPedidosPendientes.Text = "0";
+                lblIngresosMes.Text = "0.00";
             }
         }
     }

@@ -13,14 +13,15 @@ namespace Distribuidora_Iumafis.Pages.Pedidos
 
     public partial class DetallePedido
     {
-
-        /// <summary>
-        /// control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Panel pnlAlerta;
+        protected global::System.Web.UI.WebControls.Label lblAlerta;
+        protected global::System.Web.UI.WebControls.Label lblPedidoId;
+        protected global::System.Web.UI.WebControls.Label lblFecha;
+        protected global::System.Web.UI.WebControls.Label lblCliente;
+        protected global::System.Web.UI.WebControls.Label lblEstado;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
+        protected global::System.Web.UI.WebControls.Repeater rptDetalles;
+        protected global::System.Web.UI.WebControls.GridView gvPagos;
+        protected global::System.Web.UI.WebControls.Label lblPagosVacio;
     }
 }

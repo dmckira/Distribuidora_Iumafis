@@ -13,14 +13,18 @@ namespace Distribuidora_Iumafis.Pages.Pagos
 
     public partial class EditarPago
     {
-
-        /// <summary>
-        /// control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Panel pnlAlerta;
+        protected global::System.Web.UI.WebControls.Label lblAlerta;
+        protected global::System.Web.UI.WebControls.Label lblTitulo;
+        protected global::System.Web.UI.WebControls.Label lblSubtitulo;
+        protected global::System.Web.UI.WebControls.Panel pnlBtnImprimir;
+        protected global::System.Web.UI.WebControls.Panel pnlAcciones;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPedido;
+        protected global::System.Web.UI.WebControls.TextBox txtCliente;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoPago;
+        protected global::System.Web.UI.WebControls.TextBox txtMonto;
+        protected global::System.Web.UI.WebControls.TextBox txtCuotas;
+        protected global::System.Web.UI.WebControls.TextBox txtFecha;
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
     }
 }

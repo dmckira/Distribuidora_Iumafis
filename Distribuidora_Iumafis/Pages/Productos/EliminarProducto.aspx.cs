@@ -11,7 +11,22 @@ namespace Distribuidora_Iumafis.Pages.Productos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (int.TryParse(Request.QueryString["id"], out int id) && id > 0)
+            {
+                try
+                {
+                    new Negocio.Servicios.ProductoNegocio().Eliminar(id);
+                    Response.Redirect("ListarProductos.aspx?msg=eliminado");
+                }
+                catch
+                {
+                    Response.Redirect("ListarProductos.aspx?msg=error");
+                }
+            }
+            else
+            {
+                Response.Redirect("ListarProductos.aspx");
+            }
         }
     }
 }

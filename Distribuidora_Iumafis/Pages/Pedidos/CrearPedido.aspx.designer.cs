@@ -13,14 +13,12 @@ namespace Distribuidora_Iumafis.Pages.Pedidos
 
     public partial class CrearPedido
     {
-
-        /// <summary>
-        /// control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Panel pnlAlerta;
+        protected global::System.Web.UI.WebControls.Label lblAlerta;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCliente;
+        protected global::System.Web.UI.WebControls.Button btnAgregarFila;
+        protected global::System.Web.UI.WebControls.Repeater rptDetalle;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
     }
 }

@@ -91,6 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Servicios\ClienteNegocio.cs" />
+    <Compile Include="Servicios\PagoNegocio.cs" />
+    <Compile Include="Servicios\PedidoNegocio.cs" />
+    <Compile Include="Servicios\ProductoNegocio.cs" />
+    <Compile Include="Servicios\ReporteNegocio.cs" />
+    <Compile Include="Servicios\UsuarioNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -91,6 +91,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DAOs\ConexionMySQL.cs" />
+    <Compile Include="DAOs\ClienteDAO.cs" />
+    <Compile Include="DAOs\PagoDAO.cs" />
+    <Compile Include="DAOs\PedidoDAO.cs" />
+    <Compile Include="DAOs\ProductoDAO.cs" />
+    <Compile Include="DAOs\ReporteDAO.cs" />
+    <Compile Include="DAOs\UsuarioDAO.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Pago.cs" />
+    <Compile Include="Entidades\Pedido.cs" />
+    <Compile Include="Entidades\Producto.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

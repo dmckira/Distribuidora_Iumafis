@@ -13,6 +13,14 @@ namespace Distribuidora_Iumafis
 
     public partial class _default
     {
+        protected global::System.Web.UI.WebControls.Label lblTotalProductos;
+        protected global::System.Web.UI.WebControls.Label lblTotalClientes;
+        protected global::System.Web.UI.WebControls.Label lblPedidosPendientes;
+        protected global::System.Web.UI.WebControls.Label lblIngresosMes;
+        protected global::System.Web.UI.WebControls.Repeater rptTopProductos;
+        protected global::System.Web.UI.WebControls.Label lblNoTopProductos;
+        protected global::System.Web.UI.WebControls.Repeater rptTopClientes;
+        protected global::System.Web.UI.WebControls.Label lblNoTopClientes;
 
         /// <summary>
         /// Control form1.

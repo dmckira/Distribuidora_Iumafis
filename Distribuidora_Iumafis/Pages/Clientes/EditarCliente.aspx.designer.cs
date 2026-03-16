@@ -9,10 +9,26 @@
 
 namespace Distribuidora_Iumafis.Pages.Clientes
 {
-
-
     public partial class EditarCliente
     {
+        protected global::System.Web.UI.WebControls.Panel pnlAlerta;
+        protected global::System.Web.UI.WebControls.Label lblAlerta;
+        protected global::System.Web.UI.WebControls.Label lblTitulo;
+        protected global::System.Web.UI.WebControls.Label lblSubtitulo;
+        protected global::System.Web.UI.WebControls.Panel pnlFormEdit;
+        protected global::System.Web.UI.WebControls.Panel pnlFormulario;
+        protected global::System.Web.UI.WebControls.Panel pnlHistorial;
+        protected global::System.Web.UI.WebControls.Label lblClienteNombre;
+        protected global::System.Web.UI.WebControls.Label lblClienteTipo;
+        protected global::System.Web.UI.WebControls.Label lblClienteTel;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoCliente;
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtDireccion;
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
+        protected global::System.Web.UI.WebControls.GridView gvHistorial;
+        protected global::System.Web.UI.WebControls.Label lblHistorialVacio;
 
         /// <summary>
         /// control form1.
